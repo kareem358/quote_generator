@@ -13,7 +13,7 @@ class QuoteApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Random Quote Generator',
+      title: 'RQG',
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.deepPurple,
