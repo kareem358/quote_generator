@@ -20,14 +20,27 @@ class QuoteCard extends StatelessWidget {
             children: [
               Text(
                 '"${quote.text}"',
-                style: const TextStyle(fontSize: 22, fontStyle: FontStyle.italic),
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.black87,
+                  height: 1.4,
+                ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 16),
               Align(
                 alignment: Alignment.centerRight,
-                child: Text("- ${quote.author}"),
-              )
+                child: Text(
+                  "- ${quote.author}",
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.grey,
+                  ),
+                ),
+              ),
+
             ],
           ),
         ),
