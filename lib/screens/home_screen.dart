@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../models/quote_model.dart';
 import '../utils/quote_data.dart';
 import '../widgets/quote_card.dart';
@@ -35,9 +36,21 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(title: const Text("Random Quote Generator"),
+      appBar: AppBar(
+       // title: const Text("Random Quote Generator"),
         centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 6,
+
+        title: Text(
+          "Quote Generator",
+          style: GoogleFonts.poppins(
+            fontWeight: FontWeight.bold,
+            fontSize: 24,
+          ),
+        ),
       ),
+     // extendBodyBehindAppBar: true,
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -59,10 +72,39 @@ class _HomeScreenState extends State<HomeScreen> {
                             key: ValueKey(currentQuote.text),
                             quote: currentQuote)),
                 const SizedBox(height: 20),
-                ElevatedButton(
+                ElevatedButton.icon(
+                  onPressed: getRandomQuote,
+                  icon: const Icon(
+                    Icons.refresh,
+                    size: 24,
+                  ),
+                  label: const Text(
+                    "New Quote",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,              // button fill color
+                    foregroundColor: Colors.deepPurple,         // icon + text color
+                    elevation: 8,                               // raised feel
+                    shadowColor: Colors.deepPurpleAccent,       // glowing shadow
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 32,
+                      vertical: 16,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),  // pill shape
+                    ),
+                  ),
+                ),
+                
+
+                /* ElevatedButton(
                   onPressed: getRandomQuote,
                   child: const Text("New Quote"),
-                ),
+                ),*/
                 const SizedBox(height: 20,),
                 ElevatedButton.icon(
                   onPressed: () {
