@@ -99,31 +99,46 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                
+
 
                 /* ElevatedButton(
                   onPressed: getRandomQuote,
                   child: const Text("New Quote"),
                 ),*/
                 const SizedBox(height: 20,),
+              
                 ElevatedButton.icon(
                   onPressed: () {
                     final textToShare =
                         '"${currentQuote.text}"\n\n— ${currentQuote.author}';
                     Share.share(textToShare);
-                   // SharePlus.instance.share(  ShareText(text: textToShare),);
                   },
-                  icon: const Icon(Icons.share),
-                  label: const Text("Share"),
+                  icon: const Icon(
+                    Icons.share,
+                    size: 24,
+                  ),
+                  label: const Text(
+                    "Share",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     foregroundColor: Colors.deepPurple,
-                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    elevation: 8,
+                    shadowColor: Colors.deepPurpleAccent,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 32,
+                      vertical: 16,
+                    ),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(32),
                     ),
                   ),
                 ),
+
               ],
             ),
           ),
