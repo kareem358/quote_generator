@@ -53,6 +53,18 @@ class _HomeScreenState extends State<HomeScreen> {
             fontSize: 24,
           ),
         ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Theme.of(context).brightness == Brightness.dark
+                  ? Icons.wb_sunny // show sun icon in dark mode
+                  : Icons.nightlight_round, // show moon icon in light mode
+            ),
+            onPressed: () {
+              // You need state management (like Provider, GetX) to switch themes manually.
+            },
+          )
+        ],
       ),
      // extendBodyBehindAppBar: true,
       body: Container(
