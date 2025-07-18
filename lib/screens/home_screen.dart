@@ -22,6 +22,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   late Quote currentQuote;
 
+
   @override
   void initState() {
     super.initState();
