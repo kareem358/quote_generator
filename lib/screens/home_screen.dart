@@ -1,10 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quote_gennerator/widgets/primary_button.dart';
 import '../models/quote_model.dart';
 import '../utils/quote_data.dart';
 import '../widgets/quote_card.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:flutter/material.dart';
+
 
 
 
@@ -72,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             key: ValueKey(currentQuote.text),
                             quote: currentQuote)),
                 const SizedBox(height: 20),
-                ElevatedButton.icon(
+               /* ElevatedButton.icon(
                   onPressed: getRandomQuote,
                   icon: const Icon(
                     Icons.refresh,
@@ -98,7 +101,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(32),  // pill shape
                     ),
                   ),
-                ),
+                ),*/
+                PrimaryButton(label: 'New Quote', icon: Icons.refresh, onPressed: getRandomQuote),
 
 
                 /* ElevatedButton(
@@ -106,8 +110,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text("New Quote"),
                 ),*/
                 const SizedBox(height: 20,),
-              
-                ElevatedButton.icon(
+                PrimaryButton(label: 'Share', icon: Icons.share,
+                    onPressed: () {final textToShare =
+                        '"${currentQuote.text}"\n\n— ${currentQuote.author}';
+                    Share.share(textToShare);
+                    },),
+                /*ElevatedButton.icon(
                   onPressed: () {
                     final textToShare =
                         '"${currentQuote.text}"\n\n— ${currentQuote.author}';
@@ -137,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(32),
                     ),
                   ),
-                ),
+                ),*/
 
               ],
             ),
