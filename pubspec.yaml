@@ -37,6 +37,7 @@ dependencies:
   rename: ^3.1.0
   google_fonts: ^6.2.1
   share_plus: ^11.0.0
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +54,11 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/img.png"
 flutter:
 
   # The following line ensures that the Material Icons font is
