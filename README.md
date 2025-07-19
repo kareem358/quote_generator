@@ -1,16 +1,25 @@
-# quote_gennerator
+Random Quote Generator App
 
-A new Flutter project.
+A beautifully designed Random Quote Generator Flutter app that shows inspirational quotes, allows users to share them, and supports both light and dark themes. Built with modern UI practices and reusable widgets.
+Features
+•	Get random motivational quotes at the tap of a button
+•	Share quotes via device-native share options
+•	Light & Dark theme support
+•	Reusable buttons with consistent design
+•	Clean and elegant UI/UX
+Project Structure
+lib/
+├── main.dart # App entry point with theme & home screen
+├── models/
+│ └── quote.dart # Quote model class
+├── screens/
+│ └── home_screen.dart # Main UI screen showing quotes & buttons
+│ └── quotes_data.dart # Hardcoded list of quotes
+├── widgets/
+│ └── primary_button.dart # Reusable button widget
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Tech Stack
+Flutter (latest stable)
+Dart
+-share_plus package
+dependencies: share_plus: ^7.2.1  
