@@ -12,7 +12,7 @@ class QuoteCard extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Card(
         elevation: 4,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -28,7 +28,7 @@ class QuoteCard extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 18),
               Align(
                 alignment: Alignment.centerRight,
                 child: Text(
