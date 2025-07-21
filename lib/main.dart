@@ -38,14 +38,6 @@ class QuoteApp extends StatelessWidget {
       home: const HomeScreen(),
     );
 
-    /*MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Quote Generator',
-      theme: ThemeData(
-          textTheme: GoogleFonts.poppinsTextTheme(),
-          primarySwatch: Colors.deepPurple,
-        ),
-      home: const HomeScreen(),
-    );*/
+
   }
 }
