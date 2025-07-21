@@ -29,7 +29,7 @@ class PrimaryButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: isDark ? Colors.deepPurple : Colors.white,
         foregroundColor: isDark ? Colors.white : Colors.deepPurple,
-        elevation: 8,
+        elevation: 6,
         shadowColor: Colors.deepPurpleAccent.withOpacity(isDark ? 0.3 : 0.5),
         padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
         shape: RoundedRectangleBorder(
