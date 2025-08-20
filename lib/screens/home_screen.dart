@@ -6,11 +6,6 @@ import '../models/quote_model.dart';
 import '../utils/quote_data.dart';
 import '../widgets/quote_card.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:flutter/material.dart';
-
-
-
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -44,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
        // title: const Text("Random Quote Generator"),
         centerTitle: true,
         backgroundColor: Colors.transparent,
+       // backgroundColor: Colors.indigo,
         elevation: 6,
 
         title: Text(
@@ -88,78 +84,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             key: ValueKey(currentQuote.text),
                             quote: currentQuote)),
                 const SizedBox(height: 20),
-               /* ElevatedButton.icon(
-                  onPressed: getRandomQuote,
-                  icon: const Icon(
-                    Icons.refresh,
-                    size: 24,
-                  ),
-                  label: const Text(
-                    "New Quote",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,              // button fill color
-                    foregroundColor: Colors.deepPurple,         // icon + text color
-                    elevation: 8,                               // raised feel
-                    shadowColor: Colors.deepPurpleAccent,       // glowing shadow
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 32,
-                      vertical: 16,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(32),  // pill shape
-                    ),
-                  ),
-                ),*/
                 PrimaryButton(label: 'New Quote', icon: Icons.refresh, onPressed: getRandomQuote),
-
-
-                /* ElevatedButton(
-                  onPressed: getRandomQuote,
-                  child: const Text("New Quote"),
-                ),*/
                 const SizedBox(height: 20,),
                 PrimaryButton(label: 'Share', icon: Icons.share,
                     onPressed: () {final textToShare =
                         '"${currentQuote.text}"\n\n— ${currentQuote.author}';
                     Share.share(textToShare);
                     },),
-                /*ElevatedButton.icon(
-                  onPressed: () {
-                    final textToShare =
-                        '"${currentQuote.text}"\n\n— ${currentQuote.author}';
-                    Share.share(textToShare);
-                  },
-                  icon: const Icon(
-                    Icons.share,
-                    size: 24,
-                  ),
-                  label: const Text(
-                    "Share",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.deepPurple,
-                    elevation: 8,
-                    shadowColor: Colors.deepPurpleAccent,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 32,
-                      vertical: 16,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(32),
-                    ),
-                  ),
-                ),*/
-
               ],
             ),
           ),
