@@ -2,3 +2,12 @@
 * text=auto
 *.dart linguist-language=Dart
 # Force all .dart files to be recognized as Dart
+# Tell GitHub Linguist to ignore C++ files
+*.cpp linguist-detectable=false
+
+# Force Dart as the main language
+*.dart linguist-language=Dart
+*.dart linguist-detectable=true
+
+# Ignore auto-generated build files
+/build/* linguist-vendored
