@@ -5,7 +5,6 @@ class QuoteCard extends StatelessWidget {
   final Quote quote;
 
   const QuoteCard({super.key, required this.quote});
-
   @override
   Widget build(BuildContext context) {
     return Padding(
